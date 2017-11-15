@@ -1,0 +1,87 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Adobe Media Server</title>
+
+<script type="text/javascript" src="scripts/swfobject.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+			
+			$(document).ready(function(){
+
+				loadSWF("swfs/LiveSample.swf", 1280, 720, "rtmp://192.168.199.193/live/livestream93201148611123");
+				
+			});
+			
+			
+
+		function loadSWF(swfURL, swfWidth, swfHeight, swfMode, src)
+		{
+				$("#html5_vid").hide();
+				var ele = document.getElementById("demoPlayer");
+				if (ele && (ele.nodeName === "OBJECT" || ele.nodeName === "EMBED"))
+				{
+					var div = document.createElement("div");
+					ele.parentNode.insertBefore(div, ele);
+					swfobject.removeSWF("demoPlayer");
+					div.setAttribute("id", "player_main");
+				}
+
+				$("div.player_window").css("width", String("1280px"));
+				$("div.player_window").css("height", String("720px"));
+				$("div.player_window").css("text-align", "center");
+
+				// For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+				var swfVersionStr = "10.2.0";
+				// To use express install, set to playerProductInstall.swf, otherwise the empty string. 
+				var xiSwfUrlStr = "swfs/playerProductInstall.swf";
+				var flashvars = {};
+				if (src)
+				{
+					flashvars.src = src;
+				}
+				var params = {};
+				params.quality = "high";
+				params.bgcolor = "#000000";
+				params.allowscriptaccess = "sameDomain";
+				params.allowfullscreen = "true";
+				params.wmode = swfMode;
+				var attributes = {};
+				attributes.id = "demoPlayer";
+				attributes.name = "demoPlayer";
+				attributes.align = "middle";
+				swfobject.embedSWF(
+					swfURL, "player_main", 
+					swfWidth, swfHeight, 
+					swfVersionStr, xiSwfUrlStr, 
+					flashvars, params, attributes);
+				//swfobject.createCSS("player_main", "display:inline;text-align:center;outline:none;border:0;vertical-align:middle;margin:0 auto;");
+				
+		}
+		
+		</script>
+</head>
+
+<body>
+<div class="player_window">
+		<div id="html5_vid">
+			<video id="vid_player" class="videoplayer" controls="controls" autoplay="autoplay"> This browser does not support the video tag. </video>
+		</div>
+		<div id="player_main" align="center">
+			<img src="images/no_flash_title.png" 
+            	 alt="This video requires Adobe Flash Player 10.2"/>
+			<div style="text-align:center;" align="center">
+                 <!--a href="http://www.adobe.com/go/getflashplayer">Download Flash Player</a><br />
+				<script type="text/javascript"> 
+                	var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+                	document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>"); 
+                </script-->
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

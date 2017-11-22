@@ -1,0 +1,102 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+export PATH=/home/xyz/code/thrift/compiler/cpp:$PATH
+
+
+#export PYTHONPATH=/home/xyz/code/py-faster-rcnn/caffe-fast-rcnn/python:$PYTHONPATH
+#export PYTHONPATH=/home/xyz/code/py-faster-rcnn/lib:$PYTHONPATH
+
+
+export JAVA_HOME=/home/xyz/code/soft/jdk1.8.0_111
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH=/home/xyz/code/soft/bazel/output:$PATH
+
+
+
+
+ulimit -c unlimited
+
+#export PYTHONPATH=/home/xyz/code/ssd/caffe/python:$PYTHONPATH
+
+
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/home/xyz/anaconda2/bin:$PATH"
+
+
+#export PYTHONPATH=/home/xyz/code/test/pp/tensorflow/bazel-bin/tensorflow/python:$PYTHONPATH
+
+export OMP_NUM_THREADS=40
+
+
+#2017.10.23
+export PATH=/usr/local/cuda/bin:$PATH
+
+#2017.10.24
+export OPENCV_INCLUDEPATH=/home/xyz/code/test/pp/opencvlib/include
+export OPENCV_LIBPATH=/home/xyz/code/test/pp/opencvlib/lib
+
+#export OPENCV_INCLUDEPATH=/usr/local/include
+#export OPENCV_LIBPATH=/usr/local/lib
+
+
+export FACETRACKER_PATH=/home/xyz/code1/FaceTracker
+export FRAMEBUFFER_PATH=/home/xyz/code1/GEP/FrameBuffer
+
+
+#export PYTHONPATH=/home/xyz/code1/py-faster-rcnn-master/caffe-fast-rcnn/python:$PYTHONPATH
+#export PYTHONPATH=/home/xyz/code1/py-faster-rcnn-master/lib:$PYTHONPATH
+
+
+#export PYTHONPATH=/home/xyz/code1/caffe-master/python:$PYTHONPATH
+#export PYTHONPATH=/home/xyz/code1/caffe-master/lib:$PYTHONPATH
+
+#cmake -DCMAKE_PREFIX_PATH=/home/xyz/code/test/pp/opencvlib/share/OpenCV ..
+
+#export CMAKE_PREFIX_PATH=/home/xyz/code/test/pp/opencvlib/share/OpenCV
+export CMAKE_BUILD_TYPE=Release
+
+export CAFFEROOT=/home/xyz/code1/new/caffe-1
+export TBBROOT=/home/xyz/code1/tbb-2018_U1
+
+export PATH=/home/xyz/code1/test4:$PATH
+
+#export PYTHONPATH=/home/xyz/code1/caffe-xyz/python:$PYTHONPATH
+#export PYTHONPATH=/home/xyz/code1/caffe-xyz/lib:$PYTHONPATH
+
+#export PYTHONPATH=/home/xyz/code1/new/caffe-1/python:$PYTHONPATH
+
+
+#======================================
+export DEEPIR_UTIL=/home/xyz/code1/new/common-library/cpp/util
+export DEEPIR_IO=/home/xyz/code1/new/common-library/cpp/io
+export DEEPIR_IMAGE=/home/xyz/code1/new/common-library/cpp/image
+export DEEPIR_BUDDY=/home/xyz/code1/new/buddy
+export DEEPIR_MATH=/home/xyz/code1/new/common-library/cpp/math 
+export DEEPIR_ALGORITHM=/home/xyz/code1/new/common-library/cpp/algorithm
+export DEEPIR_CRYPTO=/home/xyz/code1/new/common-library/cpp/crypto
+export FAISS_ROOT=/home/xyz/code1/new/faiss
+export DEEPIR_INTERNAL_TASK=/home/xyz/code1/new/common-library/cpp/internal_task
+export DEEPIR_GPU_SERVICE=/home/xyz/code1/new/internalservice/gpu
+export DEEPIR_FACE_ALGORITHM=/home/xyz/code1/new/face-algorithm
+
+
+
+
+
+
+
+
+
+
